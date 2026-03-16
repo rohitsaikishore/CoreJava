@@ -6,3 +6,9 @@ now in the other programming languages like c,c++ the output of the compiler is 
 now when we want to send the file to the other machine we send the .class file and then we download the .class file in the other machine and JVM will produce the Machine Code.
 
 this is how Java is platform independent.
+this is why we call the java as WORA (write once run anywhere programming language)
+
+sometimes we see the java versions as version_Number.LTS it means that LTS means long term support which means updates will be given to those versions.
+
+java is a statically typed language , means if we want to store the data in variable we need to declare the datatype of the variable. this is the meaning of statically typed,
+where as if we see python we dont declare the data types to store the value inside the variable , this is dynamically typed language.
