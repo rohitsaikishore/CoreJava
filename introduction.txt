@@ -1,0 +1,8 @@
+Java is a high level programming language, platform Independent;
+now the question is how it became platform independent.-> 2 most important things we need to understand is Java Compiler and JVM , when we compile the .java file we get the byte Code (.class file) and now this .class is given to JVM for execution. 
+remember JVM is also a platform dependent. .class file is platform independent.
+
+now in the other programming languages like c,c++ the output of the compiler is the Machine code. the machine code is platform dependent.
+now when we want to send the file to the other machine we send the .class file and then we download the .class file in the other machine and JVM will produce the Machine Code.
+
+this is how Java is platform independent.
