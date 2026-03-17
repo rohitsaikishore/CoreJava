@@ -1,0 +1,21 @@
+Now the most fundemental concept is datatypes 
+java has divided the data types into primitive datatypes and non primitive datatypes(Objects)
+Primitive Types are 
+1)boolean ->1 byte because (the smallest uniquely identifiable location inside memory is 1 byte)
+2)byte->1 byte
+3)short ->2 bytes
+4)int -> 4 bytes
+5)long -> 8 bytes
+6)float ->4 bytes
+7)double ->8bytes
+8)char ->2 byte
+
+the default datatype for all the integers is int (i,e for short ,byte, int , long)
+the default datatype for all the decimal point representations are double.
+
+byte,short,int,long, --> log 2 format
+float,double -> IEEE format
+
+why formats?
+these formats are used to convert the binary repesentations in the memory to the decimal representations.
+
