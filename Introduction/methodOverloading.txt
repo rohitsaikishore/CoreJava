@@ -1,0 +1,102 @@
+what do we mean by method overloading?
+the methods which have the same name but the difference in the number of paramerters or type of paramerters or the order of parameters is called as method overloading.
+
+RETURN TYPE HAS NO IMPORTANCE IN METHOD OVERLOADING.
+
+class Add{
+	//here we can see that there is a difference in the number of parameters or type of parameters or order of parameters, this is called as method overloading.
+	int add(int a) {
+		return a;
+	}
+	float add(int a,float b) {
+		return a+b+10f;
+	}
+	float add(float b,int a) {
+		return b+a+15f;
+	}
+}
+
+public class MethodOverLoading {
+	public static void main(String[] args) {
+		Add a=new Add();
+		System.out.println(a.add(10));
+		System.out.println(a.add(10.2f,5));
+		System.out.println(a.add(13,15.3f));
+		
+	}
+
+}
+
+output
+10
+30.2
+38.3
+
+
+at the compile time the compiler will check what method to call hence this is called as compile time polymorphism
+
+if the arguments does not match , then the compiler will do the impicit typecasting to check whether the method support any ? if yes then compiler will invoke that method. 
+if more than one method supports the parameters , then compiler will raise the error.
+
+consider the below example
+
+
+class Add{
+	//here we can see that there is a difference in the number of parameters or type of parameters or order of parameters, this is called as method overloading.
+	int add(int a) {
+		return a;
+	}
+	double add(double a,float b) {
+		return a+b+10;
+	}
+}
+
+public class MethodOverLoading {
+	public static void main(String[] args) {
+		Add a=new Add();
+		System.out.println(a.add(10,20));
+		
+	}
+
+}
+//here i have passed 2 integer arguments,but the compiler converted to double type due to implicit typecasting.
+
+output:
+40.0
+
+
+consider the below example
+
+class Add{
+	//here we can see that there is a difference in the number of parameters or type of parameters or order of parameters, this is called as method overloading.
+	int add(int a) {
+		return a;
+	}
+	double add(double a,float b) {
+		return a+b+10;
+	}
+	double add(float b,double a) {
+		return b+a+15f;
+	}
+}
+
+public class MethodOverLoading {
+	public static void main(String[] args) {
+		Add a=new Add();
+		System.out.println(a.add(10,20));
+		
+	}
+
+}
+output:
+Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+	The method add(double, float) is ambiguous for the type Add
+
+	at CoreJava/coreJava.MethodOverLoading.main(MethodOverLoading.java:19)
+
+
+because passing 2 integer arguments, but the 2 methods are supported. , due to implicit typecasting. 
+
+
+You may get the doubt that main() is also a method right? it can also be overloaded?
+sol: Yes, it can also be overloaded , but the JVM will call main() which takes the Strings array as parameter.

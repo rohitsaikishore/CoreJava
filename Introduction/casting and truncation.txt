@@ -1,0 +1,58 @@
+Java supports implicit type casting and explicit type casting
+
+TypeCasting: converting the data from one type to another type is called as typecasting.
+
+implict type casting is defined as the automatic conversion of the data by compiler itself, like if the destination datatype is larger than the source datatype then we get the implict type casting like if the int is converted to long , then implicit typecasting takes place.
+
+explicit type casting: if the destination datatype is smaller than the source datatype then explicit type casting takes place, like we need to specify or tell the compiler that you explicitly convert the data
+
+in the explicit type casting the loss of data may be possible.
+
+eg:
+public class TypeCasting {
+	public static void main(String[] args) {
+			System.out.println("Implict type casting");
+			int i=131;
+			long b=i;
+			System.out.println(b);
+			
+			System.out.println("explicit type casting");
+			byte x=(byte) i;
+			System.out.println(x);
+	}
+}
+output:
+Implict type casting
+131
+explicit type casting
+-125
+
+here in the explicit type casting , we have converted the int datatype to byte datatype
+means here the source datatype is larger than the destination datatype 
+so there is a change of dataloss
+we know that byte is 1byte i,e 8 bits. so as java uses 2's complement representation, so the range is from -2^(n-1) to 2^(n-1)-1  i,e -128 to +127
+as 131 is out of range of byte so it will be in the round robin fashion like 
+-128 -127 -126 .....0....1 2 3 ..... 125 126 127 again -127 -126 -125 ............
+
+
+byte    int
+--------------------
+127  -> 127
+-128 -> 128
+-126 -> 129 
+-125 -> 130
+
+
+Truncation and Rounding
+--------------------------------------
+when we perform int/int division the result will always be an integer, and now if we convert floating point , then the result will be x.0
+
+i,e example float(12/5) will be 12/5 will be 2 not 2.4 now float(2) will be 2.0
+
+ 
+float f=(float)(12/5);
+			
+System.out.println(f);
+
+output 
+2.0
