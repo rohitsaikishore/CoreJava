@@ -1,0 +1,20 @@
+the JVM contains totally 3 areas they are 
+1) class Loader
+2)runtime data areas
+3) Execution engine.
+
+class Loader:
+it contains, linking,loading,initialization
+
+runtime Data Area
+in that it contains
+1)Method Area: 
+where the entire java code is present.
+2)stack: activation records,function calls...
+3)heap: used to store the dynamically allocated objects
+4)PC register: contains the address of the next instruction to be executed
+5)Native Stack: contains/hold the code other than java, like c,c++,Javascript,....
+
+Execution engine
+contains the JIT compiler, garbage collector.
+
