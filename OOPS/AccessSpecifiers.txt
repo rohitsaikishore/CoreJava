@@ -1,0 +1,14 @@
+Access specifiers are used to define the scope of the variable,method,..
+
+4 types of access specifiers
+1) public -> accessible with in the class, same package, outside the package(with IS IS A relationship), outside the package (without IS A relationship)
+2) protected -> accessible within the same class, outside the class same package, outside the class outside the package (with IS A relationship)
+but not accessible outside the package(without IS A relationship)
+3)default -> accessible within the class, accessible outside the class within the same package, but not accessible outside the class(with ISA relationship) , outside the class without IS A relationship
+4) private -> accessible only within the same class , and cannot be accessed else where
+
+
+public has highest visibility
+protected
+default
+private has least visibility.+
