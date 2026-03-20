@@ -1,0 +1,3 @@
+Abstraction is like hiding the implementation details
+the meaning of abstract is => saying what to do , but not how to do, not existing in practical, existing as theoritically or as a concept, this is the meaning of abstract
+
