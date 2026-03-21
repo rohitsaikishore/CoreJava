@@ -1,3 +1,5 @@
 Abstraction is like hiding the implementation details
 the meaning of abstract is => saying what to do , but not how to do, not existing in practical, existing as theoritically or as a concept, this is the meaning of abstract
-
+the meaning of abstraction is giving the requirments.,  let the implementing classses implement it as per the requirments
+if the child class does not provide the body of the abstract methods, then that class also must be declared as abstract ,
+i,e if we extend an abstract class, and if we dont provide the body , then the child class also must be declared as abstract
