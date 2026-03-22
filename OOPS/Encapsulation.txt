@@ -1,0 +1,46 @@
+Encapsulation-> wrapping up of both the data and code togeather as a single unit is called as encapuslation.
+Class is an example of encapsulation.
+-this is what we have studied , right but encapsulation is more than this
+
+encapusulation is the providing the security to data members, and protecting the access to it is called encapsulation , by the way of getters and setters ,and class variables are declared as private, for the protection purpose
+
+class Student{
+	private int id;
+	private String name;
+	public int getId() {
+		if(id<0) {
+			return 0;
+		}
+		else {
+			return id;
+		}
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		if(name.length()>5) {
+			return name;
+		}
+		else return "please provide name greater than or equal to 5 letters";
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+}
+public class Encapsulation {
+	public static void main(String[] args) {
+		Student s=new Student();
+		s.setId(-10);
+		s.setName("abc");
+		System.out.println(s.getId());
+		System.out.println(s.getName());
+	}
+}
+
+
+output
+0
+please provide name greater than or equal to 5 letters
+
+private variables of the class , can be accessed only within the class.,but if the other class should access those members, it should be possbile only via getters and setters. because we can write our own custom logic , on how to we want the data of that respective class to be shown to the outside world.
