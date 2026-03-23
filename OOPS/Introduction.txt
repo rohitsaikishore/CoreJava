@@ -1,0 +1,9 @@
+OOPS-> Object oriented programming System
+in the OOPS everything is in the form the classes and objects only.
+we have mainly 4 pillars of OOPS
+1)encapsulation
+2)polymorphism
+3)Abstraction
+4)Inheritance
+
+these 4 pillars carry the foundations for every development
