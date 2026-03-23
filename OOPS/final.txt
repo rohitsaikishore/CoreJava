@@ -1,0 +1,11 @@
+Final keyword
+how to restrict the class from being inherited?
+sol: declare the class as final.
+
+if we declare the method as final, then we can inherit the class, but we cannot override the final method()
+final methods can be inherited but cannot be overridden., 
+
+the variables declared as final, must be assigned a value, when created and that value cannot be changed.
+ we cannot declare the final for the abstract class, similarly , we cannot declare the abstract class as final
+
+ final and abstract  , cannot be used at the same time
