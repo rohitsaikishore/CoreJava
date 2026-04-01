@@ -1,0 +1,25 @@
+Static -> the main purpose of the static keyword is to bypass the object creation.
+we can call any method of the class , if declared with static then we call by using class name. 
+the static can we given to block,method,variables,innerclass
+
+the static block will run , at the start once the class is loaded on to the JVM(see the difference, we are saying when the class is loaded not when the object is called.)
+
+static variables -> these are initialized only once in their lifetime.when the class is loaded
+static method -> without the object creation we can call the static method by using the class Name.
+
+
+by default the static variables are initialized to their default values.
+
+In any java code 
+1) the static variables are initialized first
+2) the static block is run (automatically invoked when the class is loaded on to the JVM)
+3)if there are multiple static blocks then the blocks are run from top to bottom.
+
+
+the class is loaded into JVM, when we
+ create the object,
+ access the static variables,
+access the static methods,
+ calling the  class.forName()
+
+the static methods can access only other static members of the class.
