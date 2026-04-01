@@ -1,0 +1,29 @@
+Exception: abnormal termination of the program is called as exception
+
+exceptions occur at the run time.
+
+
+Unchecked Exceptions: the exception which are not checked by compiler, (not identified during the compile time)
+
+Checked Exceptions: the exceptions which are checked at the compile time.,i,e compiler will identify that exception might raise.the possibility of exception is checked by compiler.
+
+try block: the risky code (which may lead to exception on running) must be enclosed in try block
+
+here if den==0 then exception can come , so we write in try block
+try{
+	int res=num/den;
+}
+
+to handle it we use catch block
+ 
+ the catch block will execute only when there is a exception in the try block, i,e if and only if the code in the try block is leading to abnormal termination , then instead of stopping the entire program ,the program runs, but the code in try will stop at that line and run the catch block, if there is no exception , then catch block will not run
+ 
+ 
+catch(Exception e){
+	sysout("enter the non zero denominator");
+	
+}
+
+
+we cannot have the try block without catch block, and catch block without the try block
+both try and catch block must be there, 
