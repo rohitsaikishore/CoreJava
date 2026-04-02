@@ -1,0 +1,50 @@
+constructor: class name followed by parenthesis () is a constructor
+constructor does not have return value, the main purpose of constructor is the initialization of variables.
+
+class Example1{
+	Example1(){
+		System.out.println("i am the constructor");
+	}
+	
+}
+public class Constructor {
+	public static void main(String a[]) {
+	Example1 ex=new Example1();
+	}
+}
+
+output:
+i am the constructor
+
+if we dont add any constructor and JVM will add the default constructor and that constructor will not have any statemets in that.
+
+by default the parent class of every class is Object Class.
+constructor can also have parameters, if can also take the parameters just like other methods but will not have any return value, the main purpose is the initialization of the class variables.
+
+class Example1{
+	Example1(){
+		System.out.println("i am the constructor");
+	}
+	Example1(int a){
+		System.out.println("i am given with 1 parameter which contains:"+a);
+	}
+	Example1(int a,int b){
+		System.out.println("i am given with 2 parameters which contains "+ a +" "+b);
+	}
+	
+}
+public class Constructor {
+	public static void main(String a[]) {
+	Example1 ex=new Example1();
+	Example1 ex1=new Example1(5);
+	Example1 ex2=new Example1(2,4);
+	}
+}
+output:
+
+i am the constructor
+i am given with 1 parameter which contains:5
+i am given with 2 parameters which contains 2 4
+
+==================================================================================
+calling the constructor with different parameters is called as constructor overloading , which is same as above
