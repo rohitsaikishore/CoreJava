@@ -1,1 +1,1 @@
-this Repository is used to share the core java learning every day and thinking also to learn advance java.
+this Repository is used to share the core java learnings every day and thinking also to learn advance java.
