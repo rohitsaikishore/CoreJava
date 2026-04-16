@@ -1,0 +1,222 @@
+inheritance means acquiring the properties and behaviors of the parent class is called as inheritance
+it is done with the help of extends keyword.
+
+representation
+child->parent IS-A relationship
+child is a parent
+like wise dog is a Animal
+
+the child can have other properties and behaviors along with the properties and behaviours of the parent class.
+ the parent can be used to refer the child object.
+ i,e parent can access the inherited ,overridden methods in the childclass when we create the object with the parent reference.
+
+ the parent reference cannot access the specialized of the child class.
+
+ the parent of every class is Object.
+ the private variable will not be accessed into the child class. because if they are accessed then it voilates the the property of encapsulation.
+============================================================================
+SUPER()
+
+the super is used to call the parent class, the super is used to access the variable , methods,constructors of the parent class in the child class.
+
+we should know the other things such as upcasting and downcasting.
+upcasting -> when the parent refernce is used to create the child object. this is called as upcasting
+now with the parent reference when we want to access the specialized methods of the child class . then we need to do the downcasting.
+class Animal{
+	int age;
+	String name;
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	void sleep() {
+		System.out.println("the "+name+" is sleeping");
+	}
+	
+}
+class Dog extends Animal{
+	//here all the properties and behaviors of the parent class Animal are present here , animal is the parent then dog is the child.
+	//String name="Shepard";
+	
+	void run() {
+			System.out.println(name +" is running");
+	}
+	
+}
+
+public class Inheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Animal a1=new Animal();
+		a1.setName("Parent Animal");
+	 Animal a=new Dog();// this is called as Upcasting.
+	 //a.run();// run() is a specialized method. so the parent class reference cannot access the run
+	 a.setName("Animal is Animal");
+	 a.sleep();
+	 ((Dog)a).run();// this is called as downcasting.
+	 
+	}
+
+}
+
+output:
+the Animal is Animal is sleeping
+Animal is Animal is running
+
+
+ by default, the first statemetn in the child class constructo is the super(), i,e  it calls the parent class default constructor.
+
+ package coreJava;
+class Animal{
+	int age;
+	String name;
+	Animal(){
+		System.out.println("this is the parent class Animal");
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	void sleep() {
+		System.out.println("the "+name+" is sleeping");
+	}
+	
+}
+class Dog extends Animal{
+	//here all the properties and behaviors of the parent class Animal are present here , animal is the parent then dog is the child.
+	//String name="Shepard";
+	Dog(){
+		System.out.println("this is dog");
+	}
+	Dog(int a){
+		System.out.println("this is a dog constructor with 1 parameter");
+	}
+	Dog(int a,int b){
+		System.out.println("this is a dog constructor with 2 parameters");
+	}
+	
+	void run() {
+			System.out.println(name +" is running");
+	}
+	
+}
+
+public class Inheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Dog d1=new Dog();
+		Dog d2=new Dog(2);
+		Dog d3=new Dog(2,4);
+	 
+	}
+
+}
+output:
+this is the parent class Animal
+this is dog
+this is the parent class Animal
+this is a dog constructor with 1 parameter
+this is the parent class Animal
+this is a dog constructor with 2 parameters
+
+
+Java doesnot support multiple inheritance because it of diamond problem
+
+remember the IS - A relationship is always from child to parent i,e child->parent
+child IS A parent 
+child acquired properties and behaviours from the parent class.
+
+
+use of super(): super always refers to the parent class 
+super.methodName() or super.variableName
+=============================================================
+class Animal{
+	int age;
+	String name;
+	Animal(){
+		System.out.println("this is the parent class Animal");
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	void sleep() {
+		System.out.println("the "+name+" is sleeping in parent class");
+	}
+	
+}
+class Dog extends Animal{
+	//here all the properties and behaviors of the parent class Animal are present here , animal is the parent then dog is the child.
+	//String name="Shepard";
+	Dog(){
+		System.out.println("this is dog");
+	}
+	Dog(int a){
+		this();
+		System.out.println("this is a dog constructor with 1 parameter");
+	}
+	Dog(int a,int b){
+		this(3);
+		System.out.println("this is a dog constructor with 2 parameters");
+	}
+	
+	void sleep() {
+		System.out.println("the "+name+" is sleeping in child class");
+	}
+	
+	void run() {
+		super.sleep();
+			System.out.println(name +" is running");
+	}
+	
+}
+
+public class Inheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Dog d3=new Dog(2,4);
+		d3.setName("German shepard");
+		d3.run();
+	 
+	}
+
+}
+
+output
+this is the parent class Animal
+this is dog
+this is a dog constructor with 1 parameter
+this is a dog constructor with 2 parameters
+the German shepard is sleeping in parent class
+German shepard is running
