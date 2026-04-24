@@ -1,0 +1,7 @@
+in the interface, all the methods are by default abstact and public, 
+all the variables inside the interface are by default final,static,public,..
+
+functional Interface: the interface which have only one abstract method is called as functional interface,
+we can define the static methods,private methods and normal methods (by using the default keyword) in the interface from the java 9 onwards.
+
+A class can implement multiple interfaces, a interface can extend other interfaces, a class can extend another class and implement other interfaces at the same time.
